@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_required</fullName>
+    <active>true</active>
+    <description>Address fields are required</description>
+    <errorConditionFormula>OR(
+ ISBLANK( Address__City__s ),
+ ISPICKVAL( Address__StateCode__s , &apos;&apos;) ,
+ ISBLANK( Address__PostalCode__s ),
+ ISPICKVAL(Address__CountryCode__s , &apos;&apos;)
+)</errorConditionFormula>
+    <errorMessage>Address fields are required.</errorMessage>
+</ValidationRule>
