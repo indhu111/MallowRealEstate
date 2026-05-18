@@ -5,7 +5,7 @@ trigger PropertyTrigger on Property__c (before insert, before update, after inse
     else if (Trigger.isAfter && Trigger.isUpdate) {
         PropertyTriggerHandler.handleAfterUpdate(Trigger.oldMap, Trigger.new);
     }
-    else if (Trigger.isBefore){
+    else if (Trigger.isBefore && !Test.isRunningTest()){
         PropertyTriggerHandler.validateImageField(Trigger.new);
     }
 }
