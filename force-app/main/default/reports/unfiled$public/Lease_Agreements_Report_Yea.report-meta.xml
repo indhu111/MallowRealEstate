@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lease_Agreement__c.Tenant__c</field>
+    </columns>
+    <columns>
+        <field>Lease_Agreement__c.Property__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <aggregateTypes>Maximum</aggregateTypes>
+        <aggregateTypes>Minimum</aggregateTypes>
+        <field>Lease_Agreement__c.Agreed_monthly_rent__c</field>
+    </columns>
+    <columns>
+        <field>Lease_Agreement__c.Start_date__c</field>
+    </columns>
+    <columns>
+        <field>Lease_Agreement__c.End_date__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Lease Agreements Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Lease_Agreement__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Lease_Agreement__c.End_date__c</dateColumn>
+        <interval>INTERVAL_NEXT30</interval>
+    </timeFrameFilter>
+</Report>
