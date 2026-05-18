@@ -7,6 +7,12 @@
   ],
   "name": "MallowRealEstate",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "66.0"
+  "sfdcLoginUrl": "https://salesforce.com",
+  "sourceApiVersion": "66.0",
+  "packageAliases": {
+    "FlowActionsBasePack": "04t8b00000170r5AAA",
+    "FlowScreenComponentsBasePack": "04t5G000004fzDQQAY",
+    "Datatable": "04tHs000000X23BIAS",
+    "SOQLBuildAndExecute": "04tf4000004J1f9AAC"
+  }
 }

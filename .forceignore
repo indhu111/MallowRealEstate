@@ -1,21 +1,30 @@
-# List files or directories below to ignore them when running force:source:push, force:source:pull, and force:source:status
-# More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
-#
-
+# --- DEFAULT SFDX IGNORES ---
 package.xml
-
-# LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
-
-# LWC Jest
 **/__tests__/**
-
 node_modules/
 
-**/classes/OpportunityCloseBatch.cls
-**/classes/OpportunityCloseBatch.cls-meta.xml
-**/classes/LeaseAgreementEmailingBatch.cls
-**/classes/LeaseAgreementEmailingBatch.cls-meta.xml
-**/classes/LAgreementEmail.cls
-**/classes/LAgreementEmail.cls-meta.xml
+# --- PROJECT SPECIFIC IGNORES ---
+**/classes/OpportunityCloseBatch.cls*
+**/classes/LeaseAgreementEmailingBatch.cls*
+**/classes/LAgreementEmail.cls*
+
+# --- UNOFFICIAL SF DEPENDENCIES (UNMANAGED & BASE PACKS) ---
+# This blocks the utility classes and components from cluttering your 'force-app'
+force-app/main/default/classes/ExecuteSOQL*
+force-app/main/default/lwc/soqlQueryBuilder*
+force-app/main/default/classes/FieldDescriptor*
+force-app/main/default/classes/GetFieldAndObjectTokens*
+
+# Blocks the "ERS" utility files from the Screen Base Pack
+force-app/main/default/classes/ERS_*
+force-app/main/default/lwc/ers_*
+force-app/main/default/aura/ers_*
+
+# Blocks Managed Package metadata entries
+force-app/main/default/installedPackages/usf3*
+force-app/main/default/installedPackages/datatable*
+force-app/main/default/installedPackages/SOQLBuildAndExecute*
+force-app/main/default/installedPackages/FlowScreenComponentsBasePack*
+force-app/main/default/installedPackages/FlowActionsBasePack*
